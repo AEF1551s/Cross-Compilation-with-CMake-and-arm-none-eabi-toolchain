@@ -10,6 +10,7 @@ add_executable(stmproj src/main.c)
 target_include_directories(stmproj 
 PRIVATE ${CMAKE_SOURCE_DIR}/drivers/CMSIS/device
 PRIVATE ${CMAKE_SOURCE_DIR}/drivers/CMSIS/include
+PRIVATE ${CMAKE_SOURCE_DIR}/startup
                             )
 
 # Post-build command to generate elf file from executable
