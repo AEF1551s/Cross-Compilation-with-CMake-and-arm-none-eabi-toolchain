@@ -1,6 +1,7 @@
 #include <stm32f410rx.h>
 #include <stm32f4xx.h>
 #include <stdbool.h>
+#include <startup.c>
 
 int main()
 {
@@ -15,12 +16,12 @@ int main()
     {
         SET_BIT(GPIOA->BSRR, 1U << 5);
 
-        for (volatile uint32_t i = 0; i < 10000; i++)
+        for (volatile uint32_t i = 0; i < 100000; i++)
             ;
 
         SET_BIT(GPIOA->BSRR, 1U << 21);
 
-        for (volatile uint32_t i = 0; i < 10000; i++)
+        for (volatile uint32_t i = 0; i < 100000; i++)
             ;
     }
 
